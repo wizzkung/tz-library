@@ -1,0 +1,68 @@
+﻿@model tz_lib24.Models.Books
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Books</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div class="form-group">
+                <label asp-for="title" class="control-label"></label>
+                <input asp-for="title" class="form-control" />
+                <span asp-validation-for="title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="author" class="control-label"></label>
+                <input asp-for="author" class="form-control" />
+                <span asp-validation-for="author" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="code" class="control-label"></label>
+                <input asp-for="code" class="form-control" />
+                <span asp-validation-for="code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="year" class="control-label"></label>
+                <input asp-for="year" class="form-control" />
+                <span asp-validation-for="year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="publisher" class="control-label"></label>
+                <input asp-for="publisher" class="form-control" />
+                <span asp-validation-for="publisher" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="shelf" class="control-label"></label>
+                <input asp-for="shelf" class="form-control" />
+                <span asp-validation-for="shelf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="quantity" class="control-label"></label>
+                <input asp-for="quantity" class="form-control" />
+                <span asp-validation-for="quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="issue_date" class="control-label"></label>
+                <input asp-for="issue_date" class="form-control" />
+                <span asp-validation-for="issue_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="return_date" class="control-label"></label>
+                <input asp-for="return_date" class="form-control" />
+                <span asp-validation-for="return_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Назад к листу</a>
+</div>

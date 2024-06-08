@@ -1,0 +1,35 @@
+﻿@model IEnumerable<tz_lib24.Models.Issues>
+
+@{
+    ViewData["Title"] = "Выданные книги";
+}
+
+<h1>Выданные книги</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Название книги</th>
+            <th>Имя пользователя</th>
+            <th>Количество</th>
+            <th>Дата выдачи</th>
+            <th>Дата возврата</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var issue in Model)
+        {
+            <tr>
+                <td>@issue.id</td>
+                <td>@issue.book.title</td>
+                <td>@issue.user.name</td>
+                <td>@issue.quantity</td>
+                <td>@issue.issue_date.ToString("dd.MM.yyyy")</td>
+                <td>@issue.return_date.ToString("dd.MM.yyyy")</td>
+            </tr>
+        }
+        <a class="btn btn-primary" href="/">На главную</a>
+    </tbody>
+</table>
+

@@ -1,0 +1,26 @@
+﻿@model tz_lib24.Models.Books
+
+@{
+    ViewData["Title"] = "Самая популярная книга";
+}
+
+<h1>Самая популярная книга</h1>
+
+@if (Model != null)
+{
+    <div>
+        <h2>@Model.title</h2>
+        <p><strong>Автор:</strong> @Model.author</p>
+        <p><strong>Код:</strong> @Model.code</p>
+        <p><strong>Год:</strong> @Model.year</p>
+        <p><strong>Издатель:</strong> @Model.publisher</p>
+        <p><strong>Полка:</strong> @Model.shelf</p>
+        <p><strong>Количество:</strong> @Model.quantity</p>
+        <p><strong>Дата выдачи:</strong> @Model.issue_date?.ToString("dd.MM.yyyy")</p>
+        <p><strong>Дата возврата:</strong> @Model.return_date?.ToString("dd.MM.yyyy")</p>
+    </div>
+}
+else
+{
+    <p>Нет данных о самой популярной книге.</p>
+}

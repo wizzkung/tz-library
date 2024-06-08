@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Библиотека";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Добро пожаловать в библиотеку</h1>
+    <a href="@Url.Action("Index", "Books")" class="btn btn-primary">Книги</a>
+    <a class="btn btn-primary" href="/Issues/Index">Выданные книги</a>
+    <a class="btn btn-primary" href="/Popular">Посмотреть самую популярную книгу</a>
+    <a href="@Url.Action("Index", "ReturnedBooks")" class="btn btn-primary">Возвращенные книги</a>
+    <a href="@Url.Action("Index", "UnreturnedBooks")" class="btn btn-primary">Невозвращенные книги</a>
+
+</div>
